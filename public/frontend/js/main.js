@@ -26,7 +26,7 @@ $('.more-btn').on('click',function(){
     const header = document.getElementById('navbar-main');
     const sticky = header.offsetTop;
 
-      if(window.pageYOffset > sticky){
+      if(window.pageYOffset > (sticky+150)){
         header.classList.add('fixed-top')
       }
       else{
@@ -44,99 +44,180 @@ $('.more-btn').on('click',function(){
   // }
   $(document).ready(function(){
 
+    
+  $('.activ-testimonai').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
+    centerMode: true,
+    centerPadding: '0',
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 767,
+
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+  $('.acitv-testimonail-3').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '0',
+    prevArrow: '<button type="button" class="slick-prev"><i class="fal fa-arrow-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next"><i class="fal fa-arrow-right"></i></button>',
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
 
 
-      //////////// Slider Change Calue for calculator
 
-    const sipCalculator = (sip, roi, year,check) => {
-      var totalAmt = 0, arr = [],
-       months = year*12,
-       addprevious = sip*((roi/12)/100);
+
+
+//       //////////// Slider Change Calue for calculator
+
+//     const sipCalculator = (sip, roi, year,check) => {
+//       var totalAmt = 0, arr = [],
+//        months = year*12,
+//        addprevious = sip*((roi/12)/100);
       
-      for(var b=1; b <= months ; b++){
-          totalAmt = totalAmt  +  (sip+addprevious) + (totalAmt*((roi/12)/100)) 
-         // arr.push(FV)
-      }
+//       for(var b=1; b <= months ; b++){
+//           totalAmt = totalAmt  +  (sip+addprevious) + (totalAmt*((roi/12)/100)) 
+//          // arr.push(FV)
+//       }
 
-      var investedAmt = Math.round(sip*months),
-      estReturn = Math.round(totalAmt-investedAmt)
-      $('#sipInvestedAmt').text('Rs. '+investedAmt.toLocaleString());
-      $('#sipEstAmt').text('Rs. '+estReturn.toLocaleString());
-      $('#sipTotalAmt').text('Rs. '+Math.round(totalAmt).toLocaleString());
+//       var investedAmt = Math.round(sip*months),
+//       estReturn = Math.round(totalAmt-investedAmt)
+//       $('#sipInvestedAmt').text('Rs. '+investedAmt.toLocaleString());
+//       $('#sipEstAmt').text('Rs. '+estReturn.toLocaleString());
+//       $('#sipTotalAmt').text('Rs. '+Math.round(totalAmt).toLocaleString());
 
-      pieChart('Invested amount','Est. returns',investedAmt,estReturn,check) 
-  }
+//       pieChart('Invested amount','Est. returns',investedAmt,estReturn,check) 
+//   }
 
 
-  const pieChart = (head1,head2,val1,val2,check) => {
+//   const pieChart = (head1,head2,val1,val2,check) => {
 
-          var xValues = [head1, head2];
-          var yValues = [val1, val2];
-          var barColors = [ "#3cafdc", "#00729f" ];
+//           var xValues = [head1, head2];
+//           var yValues = [val1, val2];
+//           var barColors = [ "#3cafdc", "#00729f" ];
           
-          if(check == true){
+//           if(check == true){
 
-              const chart = Chart.getChart("sipCalChat");
-              chart.destroy();
-              chart = new Chart("sipCalChat", {
-                  type: "doughnut",
-                  data: {
-                      labels: xValues,
-                      datasets: [{
-                      backgroundColor: barColors,
-                      borderColor:'rgba(0,0,0,0)',
-                      data: yValues
-                      }]
-                  }           
-              });
-          } 
-          else{
-              var chart = new Chart("sipCalChat", {
-                  type: "doughnut",
-                  data: {
-                      labels: xValues,
-                      datasets: [{
-                      backgroundColor: barColors,
-                      borderColor:'rgba(0,0,0,0)',
-                      data: yValues
-                      }]
-                  }           
-              });
-          }
+//               const chart = Chart.getChart("sipCalChat");
+//               chart.destroy();
+//               chart = new Chart("sipCalChat", {
+//                   type: "doughnut",
+//                   data: {
+//                       labels: xValues,
+//                       datasets: [{
+//                       backgroundColor: barColors,
+//                       borderColor:'rgba(0,0,0,0)',
+//                       data: yValues
+//                       }]
+//                   }           
+//               });
+//           } 
+//           else{
+//               var chart = new Chart("sipCalChat", {
+//                   type: "doughnut",
+//                   data: {
+//                       labels: xValues,
+//                       datasets: [{
+//                       backgroundColor: barColors,
+//                       borderColor:'rgba(0,0,0,0)',
+//                       data: yValues
+//                       }]
+//                   }           
+//               });
+//           }
           
-  }
+//   }
 
 
-  var s = parseFloat($('#sipAmt').val()), r= parseFloat($('#sipRoi').val()), t= parseFloat($('#sipTime').val())
-  sipCalculator(s,r,t,false)
+//   var s = parseFloat($('#sipAmt').val()), r= parseFloat($('#sipRoi').val()), t= parseFloat($('#sipTime').val())
+//   sipCalculator(s,r,t,false)
 
-  $(document).on('input change','.type-range',function(){
-      const minVal = $(this).attr('min');
-      const maxVal = $(this).attr('max');
-      const bgVal = ($(this).val()-minVal)*100/(maxVal-minVal);
+//   $(document).on('input change','.type-range',function(){
+//       const minVal = $(this).attr('min');
+//       const maxVal = $(this).attr('max');
+//       const bgVal = ($(this).val()-minVal)*100/(maxVal-minVal);
 
-      $(this).css({'background-size': bgVal+'% 100%'})
-      $(this).siblings().children('.type-input').val($(this).val())
+//       $(this).css({'background-size': bgVal+'% 100%'})
+//       $(this).siblings().children('.type-input').val($(this).val())
 
-      s = parseFloat($('#sipAmt').val()), r= parseFloat($('#sipRoi').val()), t= parseFloat($('#sipTime').val())
-      sipCalculator(s,r,t, true)
-  });
+//       s = parseFloat($('#sipAmt').val()), r= parseFloat($('#sipRoi').val()), t= parseFloat($('#sipTime').val())
+//       sipCalculator(s,r,t, true)
+//   });
 
-  $('.type-input').on('keyup',function(){
-      var mminVal = $(this).attr('min'); 
-      var mmaxVal =$(this).attr('max');
-      var mVal = $(this).val();
+//   $('.type-input').on('keyup',function(){
+//       var mminVal = $(this).attr('min'); 
+//       var mmaxVal =$(this).attr('max');
+//       var mVal = $(this).val();
   
-      if(parseInt(mVal) > parseInt(mmaxVal)){
-          $(this).val(mmaxVal);
-      }
-      var bgVal = (mVal-mminVal)*100/(mmaxVal-mminVal);
-      $(this).parent().siblings('.type-range').val(mVal).css({'background-size': bgVal+'% 100%'})
+//       if(parseInt(mVal) > parseInt(mmaxVal)){
+//           $(this).val(mmaxVal);
+//       }
+//       var bgVal = (mVal-mminVal)*100/(mmaxVal-mminVal);
+//       $(this).parent().siblings('.type-range').val(mVal).css({'background-size': bgVal+'% 100%'})
 
-      s = parseFloat($('#sipAmt').val()), r= parseFloat($('#sipRoi').val()), t= parseFloat($('#sipTime').val())
-      sipCalculator(s,r,t,true)
+//       s = parseFloat($('#sipAmt').val()), r= parseFloat($('#sipRoi').val()), t= parseFloat($('#sipTime').val())
+//       sipCalculator(s,r,t,true)
      
-  });
+//   });
+
 
   
   });

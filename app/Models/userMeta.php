@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class userMeta extends Model
 {
     use HasFactory;
+    
     protected $table = "user_meta_data";
 
     protected $fillable = [

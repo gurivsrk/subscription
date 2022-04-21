@@ -1,0 +1,31 @@
+@media only screen and (max-width: 1399px) {
+    .slider-text.slider-text-2 a {
+        margin-bottom: 10px;
+    }
+    .slider-img-2 img{
+        width: 47vw;
+    }
+}
+@media only screen and (max-width: 1199px) {
+    .features-img img{
+        width: 47vw;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .subscription-plan {
+        width: 45%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .subscription-plan {
+        width: 90%;
+        margin: 50px;
+    }
+    .cta-form input {
+        width: 85%;
+        margin: 10px 0;
+    }
+    .features-img img {
+        width: 95vw;
+    }
+}

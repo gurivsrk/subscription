@@ -6,15 +6,16 @@
     <div class="col-md-9 ml-auto mr-auto mb-3 text-center">
      </div>
     <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
+    <div class="card-header card-header-info text-center" style="background: #495057;border: 0;">
+            <a href="{{route('socialLogin','github')}}"><button class="btn btn-primary">Github</button></a>
+      </div>
+      <p class="text-center mt-4" style="font-size: 25px;">OR</p>
       <form class="form" method="POST" action="{{ route('login') }}">
         @csrf
-
         <div class="card card-login card-hidden mb-3">
-          <div class="card-header card-header-info text-center">
-            <h4 class="card-title"><strong>{{ __('Login') }}</strong></h4>
-          </div>
+          <div class="text-center">
+        </div>
           <div class="card-body">
-            <p class="card-description text-center"><a href="{{ route('frontend.index') }}" class="text-info">{{ __('Or Go back to VSRK Capital ') }}</a></p>
             <div class="bmd-form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -58,6 +59,7 @@
             <button type="submit" class="btn btn-info btn-link btn-lg">{{ __('Lets Go') }}</button>
           </div>
         </div>
+        <p class="card-description text-center"><a href="{{ route('frontend.index') }}" class="text-info">{{ __('Or Go back to VSRK Capital ') }}</a></p>
       </form>
       <div class="row">
         <div class="col-6">

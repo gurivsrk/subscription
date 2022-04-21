@@ -1,4 +1,4 @@
-
+@if(auth()->user()->email_verified_at != null && auth()->user()->is_admin)
 <div class="sidebar" data-color="azure" data-background-color="white" data-image="">
   <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
@@ -158,3 +158,4 @@
     </ul>
   </div>
 </div>
+@endif

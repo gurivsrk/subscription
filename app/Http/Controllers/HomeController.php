@@ -11,7 +11,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('isAdmin');
     }
 
     /**
@@ -21,7 +21,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-       // die('test');
+        auth()->user()->subscription;
+        
         return view('dashboard');
     }
 }

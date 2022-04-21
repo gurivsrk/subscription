@@ -1,6 +1,10 @@
 <?php
 
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
+ 
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['as' => 'frontend.', 'namespace' => 'frontend'], function () {
 
 	 Route::get('/', [App\Http\Controllers\frontend\homeController::class, 'index'])->name('index');
-	 	
+	 Route::get('/inner-page', [App\Http\Controllers\frontend\homeController::class, 'all_blogs'])->name('inner-page');	
 	 /// blog
 	Route::get('/all-blogs', [App\Http\Controllers\frontend\homeController::class, 'all_blogs'])->name('all-blog');
 	Route::get('/all-blogs/{category}', [App\Http\Controllers\frontend\homeController::class, 'serach_by_cate'])->name('all-blog.cate');
@@ -37,13 +41,25 @@ Route::get('/testmailview',function(){
 	]);
 });
 
+route::get('subscribe/{package_id}',[App\Http\Controllers\client\subscriptionController::class, 'billing'])->name('subscribing');
+
+Route::get('/auth/callback', 'App\Http\Controllers\Auth\SocialiteController@SocialLiteGithub');
+// Route::get('/pending_email_verification',function(){
+// 	echo 'Please verify your email first';
+// })->name('verification.notice');
 //////// Admin group
 
-Auth::routes();
+Auth::routes(['verify'=>true]);
+
+Route::get('/auth/{redirect}','App\Http\Controllers\Auth\SocialiteController@SocialLiteLogin')->name('socialLogin');
+
+
+// Route::get('/auth/callback', 'App\Http\Controllers\Auth\RegisterController@SocialLiteGithub');
+
 
 Route::get('/vsrk-admin', 'App\Http\Controllers\HomeController@index')->name('vsrkAdmin')->middleware('auth');
 
-Route::group(['middleware' => 'auth'], function () {
+Route::middleware(['isAdmin','auth'])->group(function () {
 
 	///Other Common Functions
 	Route::post('vsrk-admin/change-order',  'App\Http\Controllers\imageController@changeF')->name('vsrk-admin.changeOrder');
@@ -94,3 +110,10 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('vsrk-admin/profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
 
+//user
+Route::group(['middleware' =>['auth','verified'], 'as'=>'user.', 'namespace'=>'users'], function () {
+	Route::get('/user/home', function(){
+		return view('client.index');
+		
+	})->name('home');	
+});
