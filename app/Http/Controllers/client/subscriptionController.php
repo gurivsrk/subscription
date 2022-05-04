@@ -25,7 +25,7 @@ class subscriptionController extends Controller
 
     public function payment()
     {
-        $api = new Api("rzp_test_FIlnINN54j6AE2", "Kl2OTIuvQFcbSlL67O5X97BU");
+        $api = new Api(env('Razorpay_key'), env('Razorpay_key_secret'));
 
         $orderData = [
             'receipt'         => 'rcptid_11',

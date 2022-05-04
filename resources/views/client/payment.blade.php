@@ -30,7 +30,7 @@
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
 var options = {
-    "key": "rzp_test_FIlnINN54j6AE2", // Enter the Key ID generated from the Dashboard
+    "key": "{{env('Razorpay_key')}}", // Enter the Key ID generated from the Dashboard
     "amount": "12200", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
     "currency": "INR",
     "name": "Vsrk Capital",
