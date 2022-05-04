@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers\client;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\subscription;
 use App\Http\Requests\StoresubscriptionRequest;
 use App\Http\Requests\UpdatesubscriptionRequest;
+use Mockery\Expectation;
+use Razorpay\Api\Api;
+use Razorpay\Api\Errors\SignatureVerificationError;
 
 class subscriptionController extends Controller
 {
@@ -17,6 +21,41 @@ class subscriptionController extends Controller
     public function __construct()
     {
         $this->middleware(['auth','verified']);
+    }
+
+    public function payment()
+    {
+        $api = new Api("rzp_test_FIlnINN54j6AE2", "Kl2OTIuvQFcbSlL67O5X97BU");
+
+        $orderData = [
+            'receipt'         => 'rcptid_11',
+            'amount'          => 15000, // 39900 rupees in paise
+            'currency'        => 'INR'
+        ];
+        
+        $razorpayOrder = $api->order->create($orderData);
+
+       return view('client.payment',compact('razorpayOrder'));
+    }
+
+    public function storePayment(Request $request)
+    {
+        dd($request);
+    //    $input = $request->all();
+
+    //    $api = new Api("rzp_test_FIlnINN54j6AE2", "Kl2OTIuvQFcbSlL67O5X97BU");
+    //     $payment = $api->payment->fetch($input['razorpay_payment_id']);
+
+    //     if(count($input) && !empty($input['razorpay_payment_id'])){
+    //         try{
+    //             $response = $payment->capture(array('amount'=>$payment['amount']));
+    //         }
+    //         catch(Exception $e){
+    //             return $e->getMessage();
+                
+    //         }
+    //         return redirect()->back()->with('Successfully');
+    //     }
     }
 
     public function billing($package_id){
@@ -94,4 +133,7 @@ class subscriptionController extends Controller
     {
         //
     }
+
+    
 }
+

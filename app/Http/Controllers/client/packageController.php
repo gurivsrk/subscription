@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\client;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\package;
 use App\Http\Requests\StorepackageRequest;

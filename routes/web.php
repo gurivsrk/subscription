@@ -34,14 +34,12 @@ Route::group(['as' => 'frontend.', 'namespace' => 'frontend'], function () {
 
 //// for testing mail function
 // Route::get('/testmail',[App\Http\Controllers\subscribeController::class,'testEmail']);
-Route::get('/testmailview',function(){
-	return view('email.subscribe',[
-		'email'=>'emials@gmial.com',
-		'email_content'=>'email content'
-	]);
-});
-
-route::get('subscribe/{package_id}',[App\Http\Controllers\client\subscriptionController::class, 'billing'])->name('subscribing');
+// Route::get('/testmailview',function(){
+// 	return view('email.subscribe',[
+// 		'email'=>'emials@gmial.com',
+// 		'email_content'=>'email content'
+// 	]);
+// });
 
 Route::get('/auth/callback', 'App\Http\Controllers\Auth\SocialiteController@SocialLiteGithub');
 // Route::get('/pending_email_verification',function(){
@@ -111,9 +109,14 @@ Route::middleware(['isAdmin','auth'])->group(function () {
 });
 
 //user
-Route::group(['middleware' =>['auth','verified'], 'as'=>'user.', 'namespace'=>'users'], function () {
+Route::group(['middleware' => ['auth','verified'], 'as'=>'user.', 'namespace'=>'users'], function () {
 	Route::get('/user/home', function(){
 		return view('client.index');
 		
 	})->name('home');	
+	Route::get('payment', [App\Http\Controllers\client\subscriptionController::class,'payment']);
+	Route::get('payment/store', [App\Http\Controllers\client\subscriptionController::class,'storePayment']);
+	route::get('subscribe/{package_id}',[App\Http\Controllers\client\subscriptionController::class, 'billing'])->name('subscribing');
+
 });
+

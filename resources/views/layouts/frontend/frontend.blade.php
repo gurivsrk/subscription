@@ -58,7 +58,7 @@
                             <div class="row">
                                 <div class="col-xl-9">
                                     <div class="cta-area-title mb-30">
-                                        <h2>Subscribe now to get company news.</h2>
+                                        <h4>We provide complimentary weekly newsletter to keep our clients updated about the stock markets</h4>
                                     </div>
                                 </div>
                             </div>

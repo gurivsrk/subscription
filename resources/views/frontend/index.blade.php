@@ -45,9 +45,8 @@
                                 <img src="img/icon/wrok-icon-1.png" alt="">
                             </div>
                             <div class="service-text service-text-2">
-                                <h3>Financial Planning</h3>
-                                <p>Lorem ipsum dolor sit amet,t consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore </p>
+                                <h3>  Well Researched stocks </h3>
+                                <p>We provide investment ideas based on thorough research to create wealth in the long term.</p>
                             </div>
                         </div>
                     </div>
@@ -57,9 +56,8 @@
                                 <img src="img/icon/wrok-icon-2.png" alt="">
                             </div>
                             <div class="service-text service-text-2">
-                                <h3>Layered Psd</h3>
-                                <p>Lorem ipsum dolor sit amet,t consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore </p>
+                                <h3> Regular Portfolio Health Check Up</h3>
+                                <p>We provide services related to your existing portfolio health check up for optimum returns on your portfolio</p>
                             </div>
                         </div>
                     </div>
@@ -69,9 +67,8 @@
                                 <img src="img/icon/wrok-icon-3.png" alt="">
                             </div>
                             <div class="service-text service-text-2">
-                                <h3>Taxes Planning</h3>
-                                <p>Lorem ipsum dolor sit amet,t consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore </p>
+                                <h3>Trading Calls for Short-Term Gains</h3>
+                                <p>We provide technical analysis or event-based calls for short term gains </p>
                             </div>
                         </div>
                     </div>
