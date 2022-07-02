@@ -81,7 +81,6 @@ class blogController extends Controller
            $data['blogImage'] =  !empty($blogs->blogImage)?updateMedia( $blogs->blogImage, $request->file('blogImage'),'blog_images'): addMedia($request->file('blogImage'),'blog_images');
            $data['thumbnail'] = !empty($blogs->thumbnail ) ? update_thumbnail($blogs->thumbnail ,$request->file('blogImage')): create_thumbnail($request->file('blogImage')) ;
         }
-        $data['thumbnail'] = 'null';
         $blogs->update($data);
         return redirect()->route('all-blogs.index')->with('update','Updated Successfully');
     }
