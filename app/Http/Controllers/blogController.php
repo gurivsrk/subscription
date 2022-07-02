@@ -80,7 +80,6 @@ class blogController extends Controller
         if($request->hasFile('blogImage')){  
            $data['blogImage'] =  updateMedia( $blogs->blogImage, $request->file('blogImage'),'blog_images');
            //$data['thumbnail'] = !empty($blogs->thumbnail ) ? update_thumbnail($blogs->thumbnail ,$request->file('blogImage')): create_thumbnail($request->file('blogImage')) ;
-          
         }
         $data['thumbnail'] = 'null';
         $blogs->update($data);
