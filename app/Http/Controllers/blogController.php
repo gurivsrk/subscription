@@ -96,7 +96,7 @@ class blogController extends Controller
     {
         $blogs = blogs::findOrFail($id);
         $image = pathinfo($blogs->blogImage,PATHINFO_BASENAME);
-        if(Storage::delete('public/blog_images/'.$image)){
+        if(Storage::delete('public/blog_images/'.$image) && Storage::delete('public/thumbnail/'.($blogs->thumbnail))){
             $blogs->delete();
             return redirect()->back()->with('success','Successfully Deleted Blog');
        }
