@@ -38,8 +38,8 @@ class blogController extends Controller
             ///$request->merge(['thumbnail'=>$thumbnail]);
             $data = $request->all();
             $data['blogImage'] = $imgname;
-            //$data['thumbnail'] = $thumbnail;
-            $data['thumbnail'] = 'null';
+            $data['thumbnail'] = $thumbnail;
+            //$data['thumbnail'] = 'null';
             $data['tags'] = json_encode($request->tags);
            
             blogs::create($data);
