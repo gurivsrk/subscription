@@ -9,7 +9,7 @@ use App\Models\category;
 use App\Models\faqs;
 use App\Models\career;
 use App\Models\testimonials;
-use App\models\subcriber;
+use App\Models\package;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -26,11 +26,19 @@ class homeController extends Controller
         $blogs = blogs::select('id','title','blogImage','created_at','categories','tags')->reverse()->Enabled()->get();
         $category = category::select('name','id','logo','bgcolor')->where('type','category')
                     ->where(function($query){ $query->where('for','all')->orWhere('for','other'); })->get()->take(6);
-        return view('frontend.index',compact(['blogs','featured_blog','category']));
+        $packages = package::select('id','package_name','price','pack_validity','any_offer','description')->orderBy('featured','desc')->take(3)->get();
+       $testimonials = testimonials::select('name','descritption','profileImg','designation' )->get();
+       $testimonials_data = (new staticPages)::getAllFields('testimonials');
+        return view('frontend.index',compact(['blogs','featured_blog','category','packages','testimonials','testimonials_data']));
+    }
+
+    public function packages(){
+        $packages = package::select('id','package_name','price','pack_validity','any_offer','description')->get();
+        return view('frontend.package',compact(['packages']));
     }
 
  ////// blog page
-    public function all_blogs(){
+    public function all_blogs(){ 
         $all_blogs = blogs::reverse()->Enabled()->get();
         return view('frontend.all-blogs',compact(['all_blogs']));
     }
@@ -52,9 +60,6 @@ class homeController extends Controller
     }
 
 
- ////// unsubscribe page
-    public function unsubscribe($email){
-       echo 'unscribe successfully';
-    }
+
 
 }

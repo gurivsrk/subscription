@@ -33,6 +33,7 @@
     background-size: 9px;
     background-position: right;
     background-position-y: -22px;
+    cursor: pointer;
 }
 .custom-select:focus,.custom-select:hover{
     background-size: 9px;
@@ -105,8 +106,25 @@ td p {
     font-weight: 500;
     padding: 5px;
 }
-
-
+.dynamicAddMore, .dynamicAddLess{
+    position: absolute;
+    right: -37px;
+    top: 6px;
+    background: #9c27b0;
+    padding: 0px 7px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 100;
+}
+.dynamicAddLess{
+    background: #00bcd4;
+    padding: 0px 6px;
+    font-size: 28px;
+    top: 10px;
+}
 /***** Pagination ******/
 .pagination svg {
     width: 14px;
@@ -139,4 +157,4 @@ textarea.cke_source{
 }
 .vsrk-icon.featured.active span, .vsrk-icon.featured:hover  {
     color: #f60;
-  }
+}

@@ -175,11 +175,11 @@ md = {
   initDocumentationCharts: function() {
     if ($('#dailySalesChart').length != 0 && $('#websiteViewsChart').length != 0) {
       /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */
-
+      const $data = $('#dailySalesChart').data('value')
       dataDailySalesChart = {
         labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
         series: [
-          [12, 17, 7, 17, 23, 18, 38]
+          $data
         ]
       };
 
@@ -301,12 +301,14 @@ md = {
     if ($('#dailySalesChart').length != 0 || $('#completedTasksChart').length != 0 || $('#websiteViewsChart').length != 0) {
       /* ----------==========     Daily Sales Chart initialization    ==========---------- */
 
+      const $data = $('#dailySalesChart').data('value')
       dataDailySalesChart = {
         labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
         series: [
-          [12, 17, 7, 17, 23, 18, 38]
+          $data
         ]
       };
+
 
       optionsDailySalesChart = {
         lineSmooth: Chartist.Interpolation.cardinal({
@@ -787,5 +789,21 @@ $(document).ready(function(){
     }
 });
 
+  $('.dynamicAddMore').on('click', function(){
+  let divType = '<div class="dynamic-input-fields position-relative">'
+      divType += '<input class="form-control " name="features[]" id="input-price" type="text" placeholder="features" value="" required="true" aria-required="true"/>'
+      divType += '<div class="dynamicAddLess">-</div></div>'
+   $(this).parent().append(divType)
+   removeField()
+  })
+
+  const removeField = () =>{
+    $('.dynamicAddLess').on('click', function(){
+      $(this).parent().remove()
+    })
+  }
+  removeField()
+
+  
 
 });

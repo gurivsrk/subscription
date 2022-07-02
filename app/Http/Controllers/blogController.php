@@ -34,10 +34,13 @@ class blogController extends Controller
     public function store(StoreblogsRequest $request)
     {
             $imgname = addMedia($request->file('blogImage'),'blog_images');
-        // $request->merge(['blogImage'=>$imgname]);
+            $thumbnail = create_thumbnail($request->file('blogImage'));
+            ///$request->merge(['thumbnail'=>$thumbnail]);
             $data = $request->all();
             $data['blogImage'] = $imgname;
+            $data['thumbnail'] = $thumbnail;
             $data['tags'] = json_encode($request->tags);
+           
             blogs::create($data);
         
         return redirect()->back()->with('success','Successfully Added');
@@ -75,8 +78,9 @@ class blogController extends Controller
 
         if($request->hasFile('blogImage')){  
            $data['blogImage'] =  updateMedia( $blogs->blogImage, $request->file('blogImage'),'blog_images');
+           $data['thumbnail'] = !empty($blogs->thumbnail ) ? update_thumbnail($blogs->thumbnail ,$request->file('blogImage')): create_thumbnail($request->file('blogImage')) ;
+          
         }
-        
         $blogs->update($data);
         return redirect()->route('all-blogs.index')->with('update','Updated Successfully');
     }

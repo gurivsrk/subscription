@@ -1,9 +1,10 @@
 @extends('layouts.frontend.frontend',['activeClass' => 'index',])
 @section('frontend_content')
+<main id="homepage">
 <section id="home" class="slider-area slider-height-2 position-relative">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-5 col-lg-5">
+                    <div class="col-xl-6 col-lg-6">
                         <div class="slider-text slider-text-2 slider-content-space-2">
                             <span class="text-white">Great experience</span>
                             <h2 class="wow fadeInLeft text-white" data-wow-delay=".3s">Meet our
@@ -15,9 +16,9 @@
                             <a class="btn btn-white slider-btn" href="#">Get Started</a>
                         </div>
                     </div>
-                    <div class="col-xl-4 offset-xl-1 col-lg-7 offst-lg-1">
-                        <div class="slider-img-2 position-relative d-none d-lg-block">
-                            <img class="wow fadeInUp" data-wow-delay=".6s"
+                    <div class="col-xl-4  col-lg-6 ">
+                        <div class="slider-img-2 position-relative">
+                            <img class="wow fadeInUp" data-wow-delay=".6s" width="666" height="396" 
                                 src="{{asset('frontend/imgs/banner_img.png')}}" alt="">
 
                         </div>
@@ -26,48 +27,38 @@
             </div>
         </section>
             <!--features-area  start -->
-            <section id="about" class="sevrice-area sevrice-area-2">
+            <section id="about" class="sevrice-area sevrice-area-2 pt-40 pb-100">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2">
-                        <div class="section-titles mb-60 text-center">
-                            <span>features</span>
-                            <h2>Awesome, Clean,<br>
-                                Poweful and Creative!
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="col-xl-4 col-lg-4 col-md-12">
                         <div class="single-service text-center mb-30">
                             <div class="servie-icon">
-                                <img src="img/icon/wrok-icon-1.png" alt="">
+                               <img src="{{asset('frontend/imgs/well-researched.png')}}" width="100" height="100"  class="img-fluid" alt="well-researched" > 
                             </div>
-                            <div class="service-text service-text-2">
-                                <h3>  Well Researched stocks </h3>
+                            <div id="service-text-D1" class="service-text service-text-2 ">
+                                <h4>Well Researched stocks</h4>
                                 <p>We provide investment ideas based on thorough research to create wealth in the long term.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="col-xl-4 col-lg-4 col-md-12">
                         <div class="single-service text-center mb-30">
-                            <div class="servie-icon">
-                                <img src="img/icon/wrok-icon-2.png" alt="">
+                        <div class="servie-icon">
+                               <img src="{{asset('frontend/imgs/regular-checkup.png')}}" width="100" height="100"  class="img-fluid" alt="regular-checkup"> 
                             </div>
-                            <div class="service-text service-text-2">
-                                <h3> Regular Portfolio Health Check Up</h3>
+                            <div id="service-text-D2" class="service-text service-text-2">
+                                <h4>Portfolio Health Check Up</h4>
                                 <p>We provide services related to your existing portfolio health check up for optimum returns on your portfolio</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="col-xl-4 col-lg-4 col-md-12">
                         <div class="single-service text-center mb-30">
-                            <div class="servie-icon">
-                                <img src="img/icon/wrok-icon-3.png" alt="">
+                        <div class="servie-icon">
+                               <img src="{{asset('frontend/imgs/trading-call.png')}}" width="100" height="100"  class="img-fluid" alt="trading-call"> 
                             </div>
-                            <div class="service-text service-text-2">
-                                <h3>Trading Calls for Short-Term Gains</h3>
+                            <div id="service-text-D3" class="service-text service-text-2">
+                                <h4>Trading Calls</h4>
                                 <p>We provide technical analysis or event-based calls for short term gains </p>
                             </div>
                         </div>
@@ -84,10 +75,14 @@
             <div class="col-xl-6 col-lg-6">
                 <div class="single-features-area-down">
                     <div class="section-titles mb-35 mt-70">
-                        <span>our benefits</span>
-                        <h2>The Most Creative <br>Ideas For Our Clients</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusLorem ipsum
-                            dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempotr</p>
+                        <h2>Equities</h2>
+                        <p><strong>Fundamental Research Reports</strong>  We make sure to offer well researched reports to our clients with important quantitative and qualitative data. It’s a great product for clients looking to invest in equities to generate long-term wealth.</p>
+                        <div class="features-text">
+                            <ul>
+                                <li><strong>Technical Short Term Calls</strong> We provide short-term calls based on various technical indicators to generate quick returns. </li>
+                                <li><strong>Technical Medium Term Calls</strong> We provide medium-term calls based on technical analysis to generate returns within a year.  </li>
+                            </ul>
+                        </div>
                         <div class="mt-40">
                             <a href="#" class="btn">Read More</a>
                         </div>
@@ -96,31 +91,29 @@
             </div>
             <div class="col-xl-5 col-lg-5">
                 <div class="features-img mb-30">
-                    <img src="{{asset('frontend/imgs/advert_bg1-min.png')}}" alt="">
+                    <img src="{{asset('frontend/imgs/equity.svg')}}" alt="">
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xl-5 col-lg-5">
                 <div class="features-img features-img-2 mb-30">
-                    <img src="{{asset('frontend/imgs/advert_bg-min.png')}}" alt="">
+                <img src="{{asset('frontend/imgs/feature-2.svg')}}" style="filter: hue-rotate(-32deg);" alt="">
                 </div>
             </div>
             <div class="col-xl-7 col-lg-7">
                 <div class="single-features-area mb-30">
                     <div class="section-titles mb-35">
-                        <span>Explore and Creates</span>
-                        <h2>Awesome,Clean,<br>Poweful and Creative!</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation.</p>
+                        <h2>Portfolio Health Check-Up </h2>
                     </div>
                     <div class="features-text">
                         <ul>
-                            <li>PHP Programming</li>
-                            <li>App Interface Design</li>
-                            <li>Web Design</li>
+                        <li><strong>Portfolio Advisory</strong> We understand client requirements and accordingly offer personalized advisory services on their portfolio for better performance.</li>
+                            <li><strong>Portfolio Re-shuffling </strong> Underperforming Portfolios need to be reshuffled to get better returns. We work along with clients to offer such specialized services.</li>
                         </ul>
+                    </div>
+                    <div class="mt-40">
+                            <a href="#" class="btn">Read More</a>
                     </div>
                 </div>
             </div>
@@ -129,155 +122,10 @@
 </section>
 <!-- services-area end -->
 
-<!-- testimonail area start -->
-<section id="review" class="dark-shape-area pt-120 pb-100">
-      <div class="container">
-          <div class="row">
-              <div class="col-xl-6 col-lg-6">
-                  <div class="section-titles service-titles-heading service-titles-heading-2 mb-60">
-                      <span>Testimonial</span>
-                      <h2>Our Custotmers Say</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusLorem ipsumLorem
-                          ipsum dolor sit amet, consectetur adipisicing elit,</p>
-                  </div>
-              </div>
-          </div>
-          <div class="row  row-padding activ-testimonai test-arrow">
-              <div class="col-xl-12">
-                  <div class="testimonail-body">
-                      <div class="testimonnial-titles mb-20">
-                          <div class="testimoinal-img">
-                              <img src="img/author/author.png" alt="">
-                          </div>
-                          <div class="autor-mata">
-                              <h3><b>Smith Jhon</b></h3>
-                              <span>HEART PATIENT</span>
-                              <i class="fa fa-quote-right"></i>
-                          </div>
-                      </div>
-                      <div class="testimoinal-text">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusLorem
-                              ipsumLorem
-                              ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt
-                              ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-12">
-                  <div class="testimonail-body">
-                      <div class="testimonnial-titles mb-20">
-                          <div class="testimoinal-img">
-                              <img src="img/icon/authour1.png" alt="">
-                          </div>
-                          <div class="autor-mata">
-                              <h3><b>Smith Jhon</b></h3>
-                              <span>HEART PATIENT</span>
-                              <i class="fa fa-quote-right"></i>
-                          </div>
-                      </div>
-                      <div class="testimoinal-text">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusLorem
-                              ipsumLorem
-                              ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt
-                              ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-12">
-                  <div class="testimonail-body">
-                      <div class="testimonnial-titles mb-20">
-                          <div class="testimoinal-img">
-                              <img src="img/icon/authour1.png" alt="">
-                          </div>
-                          <div class="autor-mata">
-                              <h3><b>Smith Jhon</b></h3>
-                              <span>HEART PATIENT</span>
-                              <i class="fa fa-quote-right"></i>
-                          </div>
-                      </div>
-                      <div class="testimoinal-text">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusLorem
-                              ipsumLorem
-                              ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt
-                              ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-12">
-                  <div class="testimonail-body">
-                      <div class="testimonnial-titles mb-20">
-                          <div class="testimoinal-img">
-                              <img src="img/icon/authour1.png" alt="">
-                          </div>
-                          <div class="autor-mata">
-                              <h3><b>Smith Jhon</b></h3>
-                              <span>HEART PATIENT</span>
-                              <i class="fa fa-quote-right"></i>
-                          </div>
-                      </div>
-                      <div class="testimoinal-text">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusLorem
-                              ipsumLorem
-                              ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt
-                              ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <section id="app" class="author-down-area cua-2 pt-120 pb-85">
-            <div class="container">
-                <div class="row justify-content-center">
-                    
-                        <div class="subscription-plan  text-center">
-                            <div class="subs-head">
-                                <h4 class="subs-title">Plan name</h4>
-                            </div>
-                            <div class="subs-body">
-                                <p class="subs-price"><sup>₹</sup>200<span>/ month</span></p>
-                                <ul class="subs-li">
-                                    <li>Feature 1</li>
-                                    <li>Feature 2</li>
-                                    <li>Feature 3</li>
-                                    <li>Feature 4</li>
-                                    <li>Feature 5</li>
-                                    <li>Feature 6</li>
-                                </ul>
-                            </div>
-                            <div class="subs-button">
-                            <a href="{{route('subscribing',1)}}"><button class="btn">Subscribe Now</button></a>
-                            </div>
-                        </div>
-                 
-                        <div class="subscription-plan  text-center">
-                            <div class="subs-head">
-                                <h4 class="subs-title">Plan name</h4>
-                            </div>
-                            <div class="subs-body">
-                                <p class="subs-price"><sup>₹</sup>350<span>/ month</span></p>
-                                <ul class="subs-li">
-                                    <li>Feature 1</li>
-                                    <li>Feature 2</li>
-                                    <li>Feature 3</li>
-                                    <li>Feature 4</li>
-                                    <li>Feature 5</li>
-                                    <li>Feature 6</li>
-                                </ul>
-                            </div>
-                            <div class="subs-button">
-                                <a href="{{route('subscribing',2)}}"><button class="btn">Subscribe Now</button></a>
-                            </div>
-                        </div>
-                   
-                </div>
-            </div>
-        </section>
+@include('partials.frontend.testimonial', compact('testimonials'))
+  </main>
+  @include('partials.frontend.package',compact('packages'))
+  
     <!-- <section id="app" class="author-down-area cua-2 pt-120 pb-85">
             <div class="container">
                 <div class="row padding-0">

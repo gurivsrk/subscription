@@ -11,10 +11,10 @@ class package extends Model
 
     protected $table = "package";
 
-    protected $fillabe = [
-       'package_name' ,	
+    protected $fillable = [
+       'package_name',	
        'price',
-       'pack_validity' 	,
+       'pack_validity',
        'any_offer' ,	
        'description' 
     ];

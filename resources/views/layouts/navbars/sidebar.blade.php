@@ -19,6 +19,31 @@
         </a>
       </li>
       </li>
+      <li class="nav-item {{ ($activePage == 'product' || @$activePage == 'package') ? ' active' : '' }}">
+        <a class="nav-link   {{ ($activePage == 'product' || @$activePage == 'package') ? '' : 'collapsed' }}" data-toggle="collapse" href="#product" aria-expanded="{{ ($activePage == 'product' ||@$activePage == 'package') ? 'true' : 'false' }}">
+          <i><i class="material-icons">content_paste</i></i>
+          <p>{{ __('Products') }}
+            <b class="caret"></b>
+          </p>
+        </a>
+        <div class="collapse  {{ ($activePage == 'product' ||@$activePage == 'package') ? 'show' : '' }}" id="product">
+          <ul class="nav">
+            <li class="nav-item{{@$activePage == 'package' ? ' active' : '' }}">
+            <a class="nav-link" href="{{ route('package.index') }}">
+              <i class="material-icons">content_paste</i>
+              <span class="sidebar-normal">{{ __('Packages') }}</span>
+              </a>
+            </li>
+            <li class="nav-item{{@$activePage == 'product' ? ' active' : '' }}">
+            <a class="nav-link" href="{{ route('product.index') }}">
+                  <i class="material-icons">inventory_2</i>
+                  <span class="sidebar-normal">{{ __('Product') }}</span>
+                </a>
+              </li>
+          </ul>
+        </div>
+      </li>
+     
       <li class="nav-item{{@$activePage == 'blogs' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('all-blogs.index') }}">
           <i class="material-icons">history_edu</i>
@@ -55,7 +80,7 @@
             </li>
           </ul>
         </div>
-      </li> -->
+      </li>  -->
       <li class="nav-item{{@$activePage == 'subscriber' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('subscriber.index') }}">
           <i class="material-icons">email</i>

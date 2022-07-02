@@ -18,7 +18,7 @@ class CreatePackageTable extends Migration
             $table->string('package_name',300);
             $table->string('price',10);
             $table->string('pack_validity',30);
-            $table->string('any_offer',300);
+            $table->string('any_offer',300)->nullable();
             $table->text('description');
             $table->timestamps();
             $table->softDeletes();

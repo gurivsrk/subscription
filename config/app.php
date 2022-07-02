@@ -177,6 +177,7 @@ return [
         ////custom
         Webwizo\Shortcodes\ShortcodesServiceProvider::class,
         App\Providers\ShortcodesServiceProvider::class,
+        'Intervention\Image\ImageServiceProvider'
     ],
 
     /*
@@ -232,6 +233,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Shortcode' => Webwizo\Shortcodes\Facades\Shortcode::class,
+        'Image' => 'Intervention\Image\Facades\Image'
     ],
 
 ];

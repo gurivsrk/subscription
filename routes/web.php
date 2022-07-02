@@ -22,13 +22,16 @@ Route::group(['as' => 'frontend.', 'namespace' => 'frontend'], function () {
 
 	 Route::get('/', [App\Http\Controllers\frontend\homeController::class, 'index'])->name('index');
 	 Route::get('/inner-page', [App\Http\Controllers\frontend\homeController::class, 'all_blogs'])->name('inner-page');	
+	 Route::get('/packages', [App\Http\Controllers\frontend\homeController::class, 'packages'])->name('packages');	
+
 	 /// blog
 	Route::get('/all-blogs', [App\Http\Controllers\frontend\homeController::class, 'all_blogs'])->name('all-blog');
 	Route::get('/all-blogs/{category}', [App\Http\Controllers\frontend\homeController::class, 'serach_by_cate'])->name('all-blog.cate');
 	Route::get('/all-blogs/{blogId}/{blogslug}',[App\Http\Controllers\frontend\homeController::class, 'single_blog'])->name('blog');
 
 	///mailing list
-	Route::get('/email/{email}/unsubscribe',[App\Http\Controllers\frontend\homeController::class, 'unsubscribe'])->name('email.unsubscribe');
+	Route::post('/newsletter-list-add', [App\Http\Controllers\frontend\NewsletterController::class,'ajax_add_email'])->name('newsletter.add');
+	Route::get('/email/{email}/unsubscribe',[App\Http\Controllers\frontend\NewsletterController::class, 'unsubscribe'])->name('email.unsubscribe');
 
 });
 
@@ -62,6 +65,11 @@ Route::middleware(['isAdmin','auth'])->group(function () {
 	///Other Common Functions
 	Route::post('vsrk-admin/change-order',  'App\Http\Controllers\imageController@changeF')->name('vsrk-admin.changeOrder');
 	Route::post('vsrk-admin/get-category',  'App\Http\Controllers\imageController@getCategoryF')->name('getCategory');
+	Route::post('vsrk-admin/change-package-order', 'App\Http\Controllers\imageController@changePackageOrder')->name('changePackageOrder');
+	
+	Route::resource('vsrk-admin/product', 'App\Http\Controllers\productController');
+
+	Route::resource('vsrk-admin/package', 'App\Http\Controllers\packageController');
 	
 	/// Blog
 	Route::patch('vsrk-admin/all-blogs/add-features',  'App\Http\Controllers\blogController@addFeatures')->name('blog.addFeatures');
@@ -117,6 +125,5 @@ Route::group(['middleware' => ['auth','verified'], 'as'=>'user.', 'namespace'=>'
 	Route::get('payment', [App\Http\Controllers\client\subscriptionController::class,'payment']);
 	Route::get('payment/store', [App\Http\Controllers\client\subscriptionController::class,'storePayment']);
 	route::get('subscribe/{package_id}',[App\Http\Controllers\client\subscriptionController::class, 'billing'])->name('subscribing');
-
 });
 

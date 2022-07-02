@@ -43,7 +43,7 @@
         @else
             <img class="img-fluid obj-fit-img" src="{{($type == 'edit-team' || $type == 'index-team')?asset($item->profileImg):asset($item->blogImage)}}">
         @endif
-            <p class="pt-2 text-justify">{!! Str::limit($item->descritption,200) !!}</p> 
+            <p class="pt-2 text-justify">{!! Str::limit($item->descritption,100) !!}</p> 
     </div>
     </div>
 </div>

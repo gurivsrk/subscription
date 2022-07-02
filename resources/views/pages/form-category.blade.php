@@ -108,11 +108,11 @@
                                     <div class="col p-0">
                                         <label class="">{{ __('Category Logo') }}</label>
                                         <div class="fileinput fileinput-new" data-provides="fileinput">
+                                        @if(!empty($cateUpdate) && !empty($cateUpdate->logo))
                                             <div class="fileinput-preview fileinput-exists thumbnail img-raised">
-                                            @if(!empty($cateUpdate))
                                                 <img src="{{asset(@$cateUpdate->logo)}}">
-                                            @endif
                                             </div>
+                                            @endif
                                                 <a href="#pablo" class="fileinput-exists" data-dismiss="fileinput">
                                                 <i class="fa fa-times"></i></a>
                                             <div id="vsrkInputImg"> 

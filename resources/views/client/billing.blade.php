@@ -1,14 +1,26 @@
 @extends('layouts.frontend.frontend',['activeClass' => 'index',])
 @section('frontend_content')
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <p>Welcome {{auth()->user()->name}}</p>
-            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
-      </div>
+
+<section id="main-blog-section" class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-11">
+                <div id="breadcrumbs" style="padding:5px 0">
+                    <span><a href="/">Home</a></span>
+                    <span><a href="/packages">Dashboard</a></span>
+                    <span>Welcome {{auth()->user()->name}}</span>
+                </div>
+            </div>
+            <div Class="col-lg-1">
+                @auth()
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                @endauth
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
  <section id="app" class="author-down-area cua-2 pt-120 pb-85">
             <div class="container">

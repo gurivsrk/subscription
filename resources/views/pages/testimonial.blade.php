@@ -11,6 +11,29 @@
               <p class="card-category">Here you can manage Testimonials</p>
             </div>
             <div class="card-body table-responsive">
+                <div class="testimonial-content p-5">
+                    <form method="post" action="{{route('staticPages.update','testimonials')}}">
+                        @csrf
+                        @method('put')
+                        <div class="form-group">
+                            <label class="">{{ __('Page Heading') }}</label>
+                            <input class="form-control{{ $errors->has('page_title') ? ' is-invalid' : '' }}" name="page_title" id="input-name" type="text" placeholder="{{ __('Page Title') }}" value="{{ old('page_title', @$data->page_title) }}" required="true" aria-required="true"/>
+                            @if ($errors->has('page_title'))
+                                <span id="page_title-error" class="error text-danger" for="input-page_title">{{ $errors->first('page_title') }}</span>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label class="position-relative">{{ __('Page Content') }}</label>
+                            <textarea class="form-control{{ $errors->has('page_content') ? ' is-invalid' : '' }} ckeditor"  rows="5"  name="page_content" id="input-page_content" required="true" aria-required="true">{{old('page_content',@$data->page_content)}}</textarea>
+                            @if ($errors->has('page_content'))
+                                <span id="page_content-error" class="error text-danger" for="input-page_content">{{ $errors->first('page_content') }}</span>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <input name="submit" type="submit" class="btn btn-success" value="SUBMIT">
+                        </div>
+                    </form>
+                </div>
                 <!--- Add Form --->
                     <div class="row  justify-content-center">
                     <div id="addTestimonialSection" class="col-md-10 vsrkAddForms {{ $errors->any() ? 'd-block' : ((@$type =='edit-testimonial')?'d-block':'') }}">

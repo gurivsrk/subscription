@@ -18,6 +18,7 @@ class blogs extends Model
             'title',
             'sub_title',
             'categories',
+            'thumbnail',
             'tags',
             'post_status',
             'descritption'

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\testimonials;
+use App\Models\staticPages;
 use Illuminate\Http\Request;
 use App\Http\Requests\storeTestimonialRequest;
 use Illuminate\Support\Facades\Storage;
@@ -17,9 +18,10 @@ class testimonialController extends Controller
      */
     public function index()
     {
+        $data = (new staticPages)::getAllFields('testimonials');
         $type = "index-testimonial";
         $item = testimonials::reverse()->get();
-        return view('pages.testimonial',compact(['item','type']));
+        return view('pages.testimonial',compact(['item','type','data']));
     }
 
 

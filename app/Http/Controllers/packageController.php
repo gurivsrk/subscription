@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\client;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -17,17 +17,9 @@ class packageController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $packageUpdate = '';
+        $packages = package::select('id','package_name','price','pack_validity','any_offer','featured')->get();
+        return view('pages.package',compact('packages'));
     }
 
     /**
@@ -38,21 +30,17 @@ class packageController extends Controller
      */
     public function store(StorepackageRequest $request)
     {
-        //
+        $description =  json_encode($request->post('features'));
+       
+        $data = $request->all();
+        $data['description']  = $description;
+ 
+        package::create($data);
+ 
+        return redirect()->back()->with('success','Successfully Added');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\package  $package
-     * @return \Illuminate\Http\Response
-     */
-    public function show(package $package)
-    {
-        //
-    }
-
-    /**
+      /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\package  $package
@@ -60,7 +48,10 @@ class packageController extends Controller
      */
     public function edit(package $package)
     {
-        //
+       
+        $packageUpdate = 'edit-package';
+        $packages = package::select('id','package_name','price','pack_validity','any_offer','description','featured')->get();
+        return view('pages.package',compact('package','packages','packageUpdate'));
     }
 
     /**
@@ -70,9 +61,14 @@ class packageController extends Controller
      * @param  \App\Models\package  $package
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatepackageRequest $request, package $package)
+    public function update(Request $request, package $package)
     {
-        //
+        $description =  json_encode($request->post('features'));
+        $data = $request->all();
+        $data['description']  = $description;
+        $package->update($data);
+
+        return redirect()->back()->with('update','Updated Successfully');
     }
 
     /**
@@ -83,6 +79,7 @@ class packageController extends Controller
      */
     public function destroy(package $package)
     {
-        //
+        $package->delete();
+        return redirect('vsrk-admin/package')->with('success','Successfully Deleted');
     }
 }

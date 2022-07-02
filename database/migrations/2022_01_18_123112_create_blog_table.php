@@ -18,11 +18,12 @@ class CreateBlogTable extends Migration
             $table->string('title',100);
             $table->string('sub_title',200)->nullable();
             $table->string('blogImage',300);
+            $table->string('thumbnail',300);
             $table->bigInteger('categories');
             $table->text('tags');
             $table->longText('descritption');
             $table->enum('post_status',['enabled','disabled']);
-            $table->boolean('feature_status');
+            $table->boolean('feature_status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

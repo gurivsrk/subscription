@@ -25,17 +25,18 @@ class subscriptionController extends Controller
 
     public function payment()
     {
-        $api = new Api(env('Razorpay_key'), env('Razorpay_key_secret'));
+    //     dd(env('Razorpay_key'));
+    //     $api = new Api( env('Razorpay_key'), env('Razorpay_key_secret'));
 
-        $orderData = [
-            'receipt'         => 'rcptid_11',
-            'amount'          => 15000, // 39900 rupees in paise
-            'currency'        => 'INR'
-        ];
+    //     $orderData = [
+    //         'receipt'         => 'rcptid_11',
+    //         'amount'          => 15000, // 39900 rupees in paise
+    //         'currency'        => 'INR'
+    //     ];
         
-        $razorpayOrder = $api->order->create($orderData);
+    //     $razorpayOrder = $api->order->create($orderData);
 
-       return view('client.payment',compact('razorpayOrder'));
+    //    return view('client.payment',compact('razorpayOrder'));
     }
 
     public function storePayment(Request $request)
@@ -59,7 +60,7 @@ class subscriptionController extends Controller
     }
 
     public function billing($package_id){
-        echo 'package_'.$package_id;
+        //echo 'package_'.$package_id;
         return view('client.billing');
     }
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\team;
+use App\Models\package;
 use Illuminate\Http\Request;
 
 class imageController extends Controller
@@ -20,8 +21,14 @@ class imageController extends Controller
           return true;
       }
   
-      public function getCategoryF(request $request){
-          
-  
+      public function changePackageOrder(request $request){
+          $id = $request->post('id');
+             $package = package::FindOrFail($id);   
+                if($package->featured == true) {
+                    package::where('id',$id)->update(array('featured'=> false));
+                    return "false";
+                }
+                package::where('id',$id)->update(array('featured'=> true)); 
+                return "done";            
       }
 }

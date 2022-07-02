@@ -6,6 +6,7 @@ body{
     box-sizing: border-box;
     margin: 0;
     background: #FFF;
+    font-size:18px ;
 }
 h1, h2,h3,h4,h5,h6{
     font-family: 'Maven Pro', sans-serif;
@@ -15,23 +16,23 @@ h1{
     font-weight: 600;
 }
 h2{
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 600;
 }
 h3{
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 600;
 }
 h4{
-    font-size: 32px;
-    font-weight: 700;
-}
-h5{
     font-size: 28px;
     font-weight: 700;
 }
+h5{
+    font-size: 24px;
+    font-weight: 700;
+}
 h6{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
 }
 .display-flex{
@@ -50,7 +51,9 @@ h6{
     position: relative;
     z-index: 1;
 }
-
+.obj-fit-contain{
+    object-fit: contain;
+}
 .cursor-point{
     cursor: pointer;
 }
@@ -68,6 +71,9 @@ h6{
 }
 #top-header a{
     width: 22%;
+}
+ol, ul{
+    padding: 0;
 }
 .mb-60 {
     margin-bottom: 60px;
@@ -141,6 +147,9 @@ h6{
 }
 li {
     list-style: none;
+}
+.text-justify{
+    text-align: justify;
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: #495057;

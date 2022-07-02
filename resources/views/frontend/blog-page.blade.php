@@ -3,15 +3,23 @@
 @php
 $tags = json_decode(@$blog->tags);
 @endphp
-<section id="main-blog-section" class="mt-4">
+<section id="main-blog-section"  class="breadcrumbs">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-7">
+        <div class="row">
+            <div class="col-lg-12">
                 <div id="breadcrumbs">
-                    <span><a href="{{route('frontend.index')}}">Home</a></span>
-                    <span><a href="{{route('frontend.all-blog')}}">All Blogs</a></span>
-                    <span><a href="{{route('frontend.all-blog.cate', $blog->cateSlug)}}">{{$blog->CatName->name}}</a></span>
-                </div>
+                        <span><a href="{{route('frontend.index')}}">Home</a></span>
+                        <span><a href="{{route('frontend.all-blog')}}">All Blogs</a></span>
+                        <span><a href="{{route('frontend.all-blog.cate', $blog->cateSlug)}}">{{$blog->CatName->name}}</a></span>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="main-blog-section-page" class="mt-5 single-blog">
+    <div class="container">
+        <div class="row justify-content-around">
+            <div class="col-lg-7">
                 <div id="main-content">
                     <h1 class="blog-title-with-border">{{$blog->title}}</h1>
                     {!! !empty($blog->sub_title)?'<h2>'.$blog->sub_title.'</h2>':'' !!}
