@@ -4,23 +4,21 @@
     }
     .slider-img-2 img{
         width: 47vw;
+        height: auto;
     }
 }
 @media only screen and (max-width: 1199px) {
-    .features-img img{
-        width: 47vw;
-    }
     footer {
         height: 1500px;
     }
     .footer-widget-2 {
         padding-top: 185px;
     }
-}
-@media only screen and (max-width: 992px) {
     .subscription-plan {
         width: 45%;
     }
+}
+@media only screen and (max-width: 992px) {
     #home::before {
         transform: rotate(-0deg) translate(0px, 0vh);
     }
@@ -33,6 +31,7 @@
     }
     .slider-img-2 img {
         width: 65vw;
+        height: auto;
     }
     .footer-area-2::before {
         height: 115%;
@@ -52,8 +51,5 @@
     .cta-form input {
         width: 85%;
         margin: 10px 0;
-    }
-    .features-img img {
-        width: 95vw;
     }
 }

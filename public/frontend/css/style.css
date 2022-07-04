@@ -175,9 +175,11 @@
 .single-service {
     padding: 40px 30px 10px;
     background:linear-gradient(328deg, #efef, #e2f5ff);
-    min-height: 17em;
+    min-height: 18em;
     border-radius: 15px;
     box-shadow: 10px 10px 45px rgb(0 0 0 / 15%);
+    display: grid;
+    align-items: center;
 }
 
 .service-text.service-text-2 p {
