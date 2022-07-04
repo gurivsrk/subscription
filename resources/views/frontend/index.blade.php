@@ -69,9 +69,9 @@
         <!--features-area end -->
 
     <!-- experience-area start -->
-    <section id="fea" class="features-area pt-40 pb-120">
+    <section id="fea" class="features-area pt-100 pb-120">
     <div class="container">
-        <div class="row pt-100 pb-100 row-padding row-padding-2 align-items-center justify-content-around">
+        <div class="row row-padding row-padding-2 align-items-center justify-content-around">
             <div class="col-xl-7 col-lg-7">
                 <div class="single-features-area-down">
                     <div class="section-titles mb-35 mt-70">
