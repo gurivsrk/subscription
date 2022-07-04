@@ -138,7 +138,9 @@ ol, ul{
 .pb-120 {
     padding-bottom: 120px;
 }
-
+.pb-50{
+    padding-bottom: 50px;
+}
 .pt-40 {
     padding-top: 40px;
 }

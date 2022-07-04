@@ -59,7 +59,7 @@
                             </div>
                             <div id="service-text-D3" class="service-text service-text-2">
                                 <h4>Technical Calls for Trading</h4>
-                                <p>Technical analysis or event-based calls for short term gains </p>
+                                <p>Technical analysis or event-based calls for short term trade </p>
                             </div>
                         </div>
                     </div>
@@ -69,9 +69,9 @@
         <!--features-area end -->
 
     <!-- experience-area start -->
-    <section id="fea" class="features-area pt-100 pb-120">
+    <section id="fea" class="features-area pt-50 pb-120">
     <div class="container">
-        <div class="row row-padding row-padding-2 align-items-center justify-content-around">
+        <div class="row row-padding row-padding-2 align-items-center justify-content-around pb-50">
             <div class="col-xl-7 col-lg-7">
                 <div class="single-features-area-down">
                     <div class="section-titles mb-35 mt-70">
@@ -95,7 +95,7 @@
                 </div>
             </div>
         </div>
-        <div class="row align-items-center justify-content-around">
+        <div class="row align-items-center justify-content-around pb-50">
             <div class="col-xl-5 col-lg-5">
                 <div class="features-img features-img-2 mb-30">
                 <img src="{{asset('frontend/imgs/technical_calls.svg')}}" class="img-fluid" alt="">
