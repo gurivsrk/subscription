@@ -124,6 +124,7 @@
     background: url('../../frontend/imgs/feature-bg-1.svg');
     background-repeat: no-repeat;
     background-position: top right;
+    background-size: 80vw;
 }
 /**** Banner ****/
 
@@ -138,7 +139,7 @@
     content: "";
     background: linear-gradient(32deg, #3f9fcf 25%, #52be95 85%);
     position: absolute;
-    width: 150%;
+    width: 130%;
     height: 100%;
     z-index: -1;
     transform: rotate(-10deg) translate(-120px, -17em);

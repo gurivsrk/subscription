@@ -6,6 +6,9 @@
         width: 47vw;
         height: auto;
     }
+    .single-service {
+        min-height: 20em;
+    }
 }
 @media only screen and (max-width: 1199px) {
     footer {

@@ -27,7 +27,7 @@
             </div>
         </section>
             <!--features-area  start -->
-            <section id="about" class="sevrice-area sevrice-area-2 pt-40 pb-100">
+            <section id="about" class="sevrice-area sevrice-area-2 pt-40 pb-50">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-12">
@@ -44,7 +44,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-12">
                         <div class="single-service text-center mb-30">
                         <div class="servie-icon">
-                               <img src="{{asset('frontend/imgs/regular-checkup.png')}}" width="100" height="100"  class="img-fluid" alt="regular-checkup"> 
+                               <img src="{{asset('frontend/imgs/portifolio-checkup.png')}}" width="100" height="100"  class="img-fluid" alt="portifolio-checkup"> 
                             </div>
                             <div id="service-text-D2" class="service-text service-text-2">
                                 <h4>Portfolio Health Check Up</h4>
@@ -55,7 +55,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-12">
                         <div class="single-service text-center mb-30">
                         <div class="servie-icon">
-                               <img src="{{asset('frontend/imgs/trading-call.png')}}" width="100" height="100"  class="img-fluid" alt="trading-call"> 
+                               <img src="{{asset('frontend/imgs/technical-call.png')}}" width="100" height="100"  class="img-fluid" alt="trading-call"> 
                             </div>
                             <div id="service-text-D3" class="service-text service-text-2">
                                 <h4>Technical Calls for Trading</h4>
@@ -129,7 +129,7 @@
                     <div class="features-text">
                         <ul>
                         <li><strong>Portfolio Advisory</strong> We understand client requirements and accordingly offer personalized advisory services on their portfolio for better performance.</li>
-                            <li><strong>Portfolio Restructuring </strong> Underperforming Portfolios need to be reshuffled to get better returns. We work along with clients to offer such specialized services.</li>
+                            <li><strong>Portfolio Restructuring</strong> Underperforming Portfolios need to be restructured to get better returns on investments. We work along with clients to offer such specialized services.</li>
                         </ul>
                     </div>
                     <div class="mt-40">
