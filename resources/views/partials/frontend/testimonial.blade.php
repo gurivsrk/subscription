@@ -1,5 +1,5 @@
 <!-- testimonail area start -->
-<section id="review" class="dark-shape-area pt-120 pb-100">
+<section id="review" class="dark-shape-area pt-50 pb-50">
       <div class="container">
           <div class="row">
               <div class="col-xl-6 col-lg-6">

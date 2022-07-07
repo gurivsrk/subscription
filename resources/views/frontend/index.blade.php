@@ -27,7 +27,7 @@
             </div>
         </section>
             <!--features-area  start -->
-            <section id="about" class="sevrice-area sevrice-area-2 pt-40 pb-50">
+            <section id="about" class="sevrice-area sevrice-area-2 pt-50 pb-50">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-12">
@@ -69,7 +69,7 @@
         <!--features-area end -->
 
     <!-- experience-area start -->
-    <section id="fea" class="features-area pt-50 pb-120">
+    <section id="fea" class="features-area pt-50 pb-50">
     <div class="container">
         <div class="row row-padding row-padding-2 align-items-center justify-content-around pb-50">
             <div class="col-xl-7 col-lg-7">
