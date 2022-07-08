@@ -72,6 +72,10 @@
     <section id="fea" class="features-area pt-50 pb-50">
     <div class="container">
         <div class="row row-padding row-padding-2 align-items-center justify-content-around pb-50">
+            <div class="section-titles service-titles-heading service-titles-heading-2 text-center">
+                <h1 class="blog-title-with-border">What we do</h1>
+                <p>VSRK provides investment ideas through exhaustive research on stocks, mutual funds and other investments for its subscribers which help them to take better investment decision to achieve their financial goals. Our commitment to serve the clients with best of our services let us aim towards consistent achievement of goals. We keep a regular track of economic activities, corporate actions and any such events which is directly or indirectly related to our research on various companies.</p>
+            </div>
             <div class="col-xl-7 col-lg-7">
                 <div class="single-features-area-down">
                     <div class="section-titles mb-35 mt-70">

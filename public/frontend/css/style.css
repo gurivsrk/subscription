@@ -71,7 +71,7 @@
 
 /**** Navbar ****/
 .navbar{
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 111;
@@ -132,20 +132,20 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    padding: 69px 0 50px;
+    padding: 45px 0 115px;
     z-index: 1;
 }
 #home::before {
     content: "";
     background: linear-gradient(32deg, #3f9fcf 25%, #52be95 85%);
     position: absolute;
-    width: 130%;
+    width: 120em;
     height: 100%;
     z-index: -1;
-    transform: rotate(-10deg) translate(-120px, -17em);
+    transform: rotate(-10deg) translate(-120px, -15em);
 }
 .slider-text.slider-text-2.slider-content-space-2 {
-    margin-top: 135px;
+    margin-top: 85px;
 }
 .slider-text.slider-content-space-2>span {
     margin-bottom: 2px;
@@ -169,7 +169,7 @@
     margin-bottom: 45px;
 }
 .slider-img-2 {
-    margin-top: 160px;
+    margin-top: 130px;
 }
 /******* Features ****/
 
@@ -605,7 +605,7 @@ footer .navbar-brand{
 .breadcrumbs{
     background: aliceblue;
     padding: 10px 0;
-    margin: 70px 0 0;
+    margin: 10px 0 0;
 }
 
 
