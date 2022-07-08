@@ -71,13 +71,13 @@
     <div class="container">
         <div class="row row-padding row-padding-2 align-items-center justify-content-around">
             <div class="col-xl-6 col-lg-5">
-                <div class="features-img mb-30">
+                <div class="features-img">
                     <img src="{{asset('frontend/imgs/about.svg')}}" class="img-fluid" style="filter: hue-rotate(-25deg);" alt="about-us">
                 </div>
             </div>
             <div class="col-xl-6 col-lg-7">
                 <div class="single-features-area-down">
-                    <div class="section-titles mb-35 mt-70">
+                    <div class="section-titles mt-70">
                         <div class="section-titles service-titles-heading service-titles-heading-2">
                             <h1 class="blog-title-with-border">Who we are</h1>
                          </div>
