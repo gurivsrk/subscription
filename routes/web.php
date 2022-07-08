@@ -23,6 +23,9 @@ Route::group(['as' => 'frontend.', 'namespace' => 'frontend'], function () {
 	 Route::get('/', [App\Http\Controllers\frontend\homeController::class, 'index'])->name('index');
 	 Route::get('/inner-page', [App\Http\Controllers\frontend\homeController::class, 'all_blogs'])->name('inner-page');	
 	 Route::get('/packages', [App\Http\Controllers\frontend\homeController::class, 'packages'])->name('packages');	
+	 Route::get('/about-us', function(){
+		return view('frontend.about-us');   
+	 })->name('about');
 
 	 /// blog
 	Route::get('/all-blogs', [App\Http\Controllers\frontend\homeController::class, 'all_blogs'])->name('all-blog');

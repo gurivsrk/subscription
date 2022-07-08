@@ -20,7 +20,6 @@ class homeController extends Controller
      
 
     public function index(){
-
         $featured_blog = blogs::select('id','title','blogImage','created_at','categories','feature_status')
                         ->Enabled()->orderBy('feature_status','desc')->reverse()->get()->take(4);
         $blogs = blogs::select('id','title','blogImage','created_at','categories','tags')->reverse()->Enabled()->get();
@@ -36,6 +35,7 @@ class homeController extends Controller
         $packages = package::select('id','package_name','price','pack_validity','any_offer','description')->get();
         return view('frontend.package',compact(['packages']));
     }
+
 
  ////// blog page
     public function all_blogs(){ 

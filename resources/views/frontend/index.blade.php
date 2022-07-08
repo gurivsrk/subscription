@@ -26,50 +26,72 @@
                 </div>
             </div>
         </section>
-            <!--features-area  start -->
-            <section id="about" class="sevrice-area sevrice-area-2 pt-50 pb-50">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-12">
-                        <div class="single-service text-center mb-30">
-                            <div class="servie-icon">
-                               <img src="{{asset('frontend/imgs/well-researched.png')}}" width="100" height="100"  class="img-fluid" alt="well-researched" > 
-                            </div>
-                            <div id="service-text-D1" class="service-text service-text-2 ">
-                                <h4>Well Researched stocks</h4>
-                                <p>Investment ideas based on thorough research to create wealth in the long term.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-12">
-                        <div class="single-service text-center mb-30">
-                        <div class="servie-icon">
-                               <img src="{{asset('frontend/imgs/portifolio-checkup.png')}}" width="100" height="100"  class="img-fluid" alt="portifolio-checkup"> 
-                            </div>
-                            <div id="service-text-D2" class="service-text service-text-2">
-                                <h4>Portfolio Health Check Up</h4>
-                                <p>Services related to your existing portfolio health check up for optimum returns on your portfolio</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-12">
-                        <div class="single-service text-center mb-30">
-                        <div class="servie-icon">
-                               <img src="{{asset('frontend/imgs/technical-call.png')}}" width="100" height="100"  class="img-fluid" alt="trading-call"> 
-                            </div>
-                            <div id="service-text-D3" class="service-text service-text-2">
-                                <h4>Technical Calls for Trading</h4>
-                                <p>Technical analysis or event-based calls for short term trade </p>
-                            </div>
-                        </div>
+<!--about_us  start -->
+<section id="feature" class="sevrice-area sevrice-area-2">
+<div class="container">
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-12">
+            <div class="single-service text-center mb-30">
+                <div class="servie-icon">
+                    <img src="{{asset('frontend/imgs/well-researched.png')}}" width="100" height="100"  class="img-fluid" alt="well-researched" > 
+                </div>
+                <div id="service-text-D1" class="service-text service-text-2 ">
+                    <h4>Well Researched stocks</h4>
+                    <p>Investment ideas based on thorough research to create wealth in the long term.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12">
+            <div class="single-service text-center mb-30">
+            <div class="servie-icon">
+                    <img src="{{asset('frontend/imgs/portifolio-checkup.png')}}" width="100" height="100"  class="img-fluid" alt="portifolio-checkup"> 
+                </div>
+                <div id="service-text-D2" class="service-text service-text-2">
+                    <h4>Portfolio Health Check Up</h4>
+                    <p>Services related to your existing portfolio health check up for optimum returns on your portfolio</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12">
+            <div class="single-service text-center mb-30">
+            <div class="servie-icon">
+                    <img src="{{asset('frontend/imgs/technical-call.png')}}" width="100" height="100"  class="img-fluid" alt="trading-call"> 
+                </div>
+                <div id="service-text-D3" class="service-text service-text-2">
+                    <h4>Technical Calls for Trading</h4>
+                    <p>Technical analysis or event-based calls for short term trade </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+        <!--features-area end -->
+<section id="who-we-are" class="features-area pt-50">
+    <div class="container">
+        <div class="row row-padding row-padding-2 align-items-center justify-content-around">
+            <div class="col-xl-6 col-lg-5">
+                <div class="features-img mb-30">
+                    <img src="{{asset('frontend/imgs/about.svg')}}" class="img-fluid" style="filter: hue-rotate(-25deg);" alt="about-us">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-7">
+                <div class="single-features-area-down">
+                    <div class="section-titles mb-35 mt-70">
+                        <div class="section-titles service-titles-heading service-titles-heading-2">
+                            <h1 class="blog-title-with-border">Who we are</h1>
+                         </div>
+                        <p class="text-justify mt-4"><strong>VSRK Capital Private Limited</strong> was incorporated on 8th November 2013 with the name of VSRK Wealth Creator Pvt. Ltd. has been performing its services of enhancing the wealth of its huge client base with its expertise personnel and knowledge of both traditional and modern Financial Products under Investment Services to ensure a smooth and amazing satisfaction. Under the guidance of Lt.
+                         Shri R.K. Agrawal, who served as the President with utmost responsibility. He boosted the strength & potential of the company by many folds by amalgamating the clients and AUM of M/S Agrawal Investments Consultants. Mr. Agrawal took an initiative to consolidate all his businesses under VSRK Wealth Creator Private Limited in Feb 2018 and as per SEBI guidelines, the company name changed to VSRK Capital Private Limited on 15 Nov 2021. 
+                        Mr. Agrawal’s vision to build-up a team of exuberant, enterprising and dynamic professionals, certified by the AMFI, NISM and IRDA, working collectively towards a common goal of offering the best for its clients.</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--features-area end -->
-
+        </div>
+    </div>
+</section>
     <!-- experience-area start -->
-    <section id="fea" class="features-area pt-50 pb-50">
+    <section id="what-we-do" class="features-area pt-50 pb-50">
     <div class="container">
         <div class="row row-padding row-padding-2 align-items-center justify-content-around pb-50">
             <div class="section-titles service-titles-heading service-titles-heading-2 text-center">
