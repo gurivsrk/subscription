@@ -139,10 +139,10 @@
     content: "";
     background: linear-gradient(32deg, #3f9fcf 25%, #52be95 85%);
     position: absolute;
-    width: 120em;
+    width: 125%;
     height: 100%;
     z-index: -1;
-    transform: rotate(-10deg) translate(-120px, -15em);
+    transform: rotate(-10deg) translate(-120px, -16em);
 }
 .slider-text.slider-text-2.slider-content-space-2 {
     margin-top: 85px;
@@ -504,7 +504,7 @@ footer .navbar-brand{
     width: 150%;
     height: 100%;
     z-index: -1;
-    transform: rotate(-10deg) translate(-151px, 20em);
+    transform: rotate(-10deg) translate(-151px, 14em);
   }
 .news-latter-area {
     border-radius: 10px;
@@ -536,7 +536,7 @@ footer .navbar-brand{
     border-radius: 5px;
 }
 .newsletter{
-    margin-top: 165px;
+    margin-top: 105px;
 }
 .footer-widget-2 {
     padding-top: 130px;
