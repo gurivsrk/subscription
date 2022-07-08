@@ -12,8 +12,8 @@
                             <p class="text-white">Dnsectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                                 labore et dolore magna
                                 aliqua. </p>
-                            <a class="btn btn-white" href="#">Our Services</a>
-                            <a class="btn btn-white slider-btn" href="#">Get Started</a>
+                            <a class="btn btn-white slider-btn" href="{{route('frontend.about')}}">About Us</a>
+                            <a class="btn btn-white slider-btn" href="#feature">Get Started</a>
                         </div>
                     </div>
                     <div class="col-xl-4  col-lg-6 ">

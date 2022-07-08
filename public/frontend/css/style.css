@@ -127,7 +127,9 @@
     background-size: 80vw;
 }
 /**** Banner ****/
-
+.slider-btn{
+    background: transparent;
+}
 .slider-height-2 {
     background-repeat: no-repeat;
     background-size: cover;
