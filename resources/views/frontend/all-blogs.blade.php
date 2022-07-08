@@ -14,7 +14,7 @@
 </section>
 <div class="section-titles service-titles-heading service-titles-heading-2 mb-60 text-center py-4">
     <h1 class="blog-title-with-border">Blogs</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusLorem ipsumLorem
+    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusLorem ipsumLorem
         ipsum dolor sit amet, consectetur adipisicing elit,</p>
 </div>
 <section id="masonry-gallery" class="bg-light mt-5">

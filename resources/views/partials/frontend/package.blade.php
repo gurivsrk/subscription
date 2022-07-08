@@ -4,7 +4,7 @@
                 <div class="row justify-content-center">
                         <div class="section-titles service-titles-heading service-titles-heading-2 mb-60 text-center">
                             <h1 class="blog-title-with-border">Our Packages</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusLorem ipsumLorem
+                            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusLorem ipsumLorem
                                 ipsum dolor sit amet, consectetur adipisicing elit,</p>
                         </div>
                         @foreach ($packages as $package)
