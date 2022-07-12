@@ -42,7 +42,7 @@
         <div class="row row-padding row-padding-2 align-items-center justify-content-around">
             <div class="col-xl-5 col-lg-5">
                 <div class="features-img mb-30 text-center">
-                    <img src="{{asset('frontend/imgs/about.svg')}}" width="350px" class="img-fluid" style="filter: hue-rotate(-25deg);" alt="about-us">
+                    <img src="{{asset('frontend/imgs/what-we-do.svg')}}" width="350px" class="img-fluid" style="filter: hue-rotate(-25deg);" alt="about-us">
                 </div>
             </div>
             <div class="col-xl-7 col-lg-7">
@@ -69,7 +69,7 @@
             </div>
             <div class="col-xl-5 col-lg-5">
                 <div class="features-img text-center">
-                    <img src="{{asset('frontend/imgs/about.svg')}}"  width="350px" class="img-fluid" style="filter: hue-rotate(-25deg);" alt="about-us">
+                    <img src="{{asset('frontend/imgs/how-we-do.svg')}}"  width="350px" class="img-fluid" style="filter: hue-rotate(-25deg);" alt="about-us">
                 </div>
             </div>
         </div>
