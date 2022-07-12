@@ -127,7 +127,7 @@
         <div class="row align-items-center justify-content-around pb-50">
             <div class="col-xl-5 col-lg-5">
                 <div class="features-img features-img-2 mb-30">
-                <img src="{{asset('frontend/imgs/technical_calls.svg')}}" class="img-fluid" alt="">
+                <img src="{{asset('frontend/imgs/technical_call.svg')}}" style="filter: hue-rotate(-35deg);" class="img-fluid" alt="techincal calls">
                 </div>
             </div>
             <div class="col-xl-7 col-lg-7">
