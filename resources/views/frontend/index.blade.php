@@ -105,8 +105,11 @@
                         <p class="text-justify"><strong>Fundamental Research Reports</strong>  We make sure to offer well researched reports to our clients with important quantitative and qualitative data. It’s a great product for clients looking to invest in equities to generate long-term wealth. We adopt bottom-up approach as we believe a company can outperform the markets if it has been showcasing improved financials over a period of time irrespective of economic conditions.  </p>
                         <div class="features-text">
                             <ul>
-                                <li><strong>Mid-Cap Stocks</strong> Research on companies whose market capitalization is above Rs 5,000 cr. but less than Rs 20,000 cr. </li>
-                                <li><strong>Small-Cap Stocks</strong> Research on companies whose market capitalization is less than Rs 5,000 cr. </li>
+                                <li><strong>Mid-Cap Stocks</strong> Research on companies whose market capitalization is above Rs 5,000 cr. but less than Rs 20,000 cr. A bit riskier than large cap stocks but also have a potential to turn into large cap at the same time.</li>
+                                <li><strong>Small-Cap Stocks</strong> Research on companies whose market capitalization is less than Rs 5,000 cr. These companies have significant growth opportunities though remain volatile due to growth challenges.</li>
+                                <li><strong>Sectoral Stocks</strong> Shortlisting and Research on the top stocks under a comparable sector </li>
+                                <li><strong>High Dividend Yielding Stocks</strong> Investment in the companies, which are regular dividend paying. Moreover, focusing on high dividend yield stocks, which are financially sound and performing.</li>
+                                <li><strong>Low Beta Stocks</strong> Companies having a low beta play defensive in the stock markets which doesn/’t generate huge returns but also relatively safer during the downtrend for the markets.</li>
                             </ul>
                         </div>
                         <div class="mt-40">
@@ -137,6 +140,7 @@
                         <ul>
                         <li><strong>Short Term Calls</strong> Short-term calls based on various technical indicators for short-term trades.</li>
                         <li><strong>Medium Term Calls</strong> Medium-term calls based on technical analysis for medium-term trades. </li>
+                        <li><strong>BTST/ STBT Calls</strong> Buy Today Sell tomorrow (BTST) or Sell Today Buy tomorrow (STBT) calls based on events, momentum or other technical indicators. These calls have been very popular among the trader community. </li>
                         </ul>
                     </div>
                     <div class="mt-40">
